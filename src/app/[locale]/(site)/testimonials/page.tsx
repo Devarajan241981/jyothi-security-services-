@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { TestimonialCard } from "@/components/shared/testimonial-card";
-import { createClient } from "@/lib/supabase/server";
+import { createPublicClient } from "@/lib/supabase/server";
 import { initialsFor } from "@/lib/utils";
 
 export async function generateMetadata({
@@ -24,12 +24,14 @@ export default async function TestimonialsPage({
   setRequestLocale(locale);
   const t = await getTranslations("testimonials");
 
-  const supabase = await createClient();
-  const { data: testimonials } = await supabase
-    .from("testimonials")
-    .select("*")
-    .eq("is_published", true)
-    .order("created_at", { ascending: false });
+  const supabase = await createPublicClient();
+  const { data: testimonials } = supabase
+    ? await supabase
+        .from("testimonials")
+        .select("*")
+        .eq("is_published", true)
+        .order("created_at", { ascending: false })
+    : { data: null };
 
   return (
     <section className="py-16 sm:py-24">

@@ -34,3 +34,18 @@ export async function createClient() {
     },
   );
 }
+
+/**
+ * Public-site variant that tolerates missing Supabase env vars so marketing
+ * pages still render before Supabase is configured. Returns null when the
+ * env vars are absent; callers must handle the null case.
+ */
+export async function createPublicClient() {
+  if (
+    !process.env.NEXT_PUBLIC_SUPABASE_URL ||
+    !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  ) {
+    return null;
+  }
+  return createClient();
+}

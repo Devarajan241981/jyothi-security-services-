@@ -3,7 +3,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { GalleryGrid } from "@/components/gallery/gallery-grid";
 import { galleryCategories } from "@/lib/constants/site";
-import { createClient } from "@/lib/supabase/server";
+import { createPublicClient } from "@/lib/supabase/server";
 
 export async function generateMetadata({
   params,
@@ -24,13 +24,15 @@ export default async function GalleryPage({
   setRequestLocale(locale);
   const t = await getTranslations("gallery");
 
-  const supabase = await createClient();
-  const { data: images } = await supabase
-    .from("gallery_images")
-    .select("*")
-    .eq("is_published", true)
-    .order("sort_order", { ascending: true })
-    .order("created_at", { ascending: false });
+  const supabase = await createPublicClient();
+  const { data: images } = supabase
+    ? await supabase
+        .from("gallery_images")
+        .select("*")
+        .eq("is_published", true)
+        .order("sort_order", { ascending: true })
+        .order("created_at", { ascending: false })
+    : { data: null };
 
   const categoryLabels = Object.fromEntries(
     galleryCategories.map((c) => [c.slug, t(`categories.${c.slug}`)]),

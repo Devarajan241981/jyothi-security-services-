@@ -1,18 +1,20 @@
 import { getTranslations } from "next-intl/server";
 import { SectionHeading } from "@/components/shared/section-heading";
 import { TestimonialsMarquee } from "@/components/home/testimonials-marquee";
-import { createClient } from "@/lib/supabase/server";
+import { createPublicClient } from "@/lib/supabase/server";
 
 export async function TestimonialsPreview() {
   const t = await getTranslations("home");
 
-  const supabase = await createClient();
-  const { data: testimonials } = await supabase
-    .from("testimonials")
-    .select("*")
-    .eq("is_published", true)
-    .order("created_at", { ascending: false })
-    .limit(12);
+  const supabase = await createPublicClient();
+  const { data: testimonials } = supabase
+    ? await supabase
+        .from("testimonials")
+        .select("*")
+        .eq("is_published", true)
+        .order("created_at", { ascending: false })
+        .limit(12)
+    : { data: null };
 
   if (!testimonials || testimonials.length === 0) return null;
 
