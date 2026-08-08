@@ -9,6 +9,8 @@ import type { Database } from "@/types/database";
  */
 export async function updateSession(request: NextRequest) {
   const isLoginPage = request.nextUrl.pathname === "/admin/login";
+  const isResetPage = request.nextUrl.pathname === "/admin/reset-password";
+  const isPublicAdminPage = isLoginPage || isResetPage;
 
   // Without Supabase env vars the admin panel can't function, but middleware
   // must not 500 — send users to the login page instead.
@@ -16,7 +18,7 @@ export async function updateSession(request: NextRequest) {
     !process.env.NEXT_PUBLIC_SUPABASE_URL ||
     !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
   ) {
-    if (isLoginPage) return NextResponse.next({ request });
+    if (isPublicAdminPage) return NextResponse.next({ request });
     const url = request.nextUrl.clone();
     url.pathname = "/admin/login";
     return NextResponse.redirect(url);
@@ -49,7 +51,7 @@ export async function updateSession(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  if (!user && !isLoginPage) {
+  if (!user && !isPublicAdminPage) {
     const url = request.nextUrl.clone();
     url.pathname = "/admin/login";
     return NextResponse.redirect(url);

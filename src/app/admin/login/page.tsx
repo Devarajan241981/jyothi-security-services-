@@ -7,7 +7,7 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { signIn } from "@/lib/actions/admin/auth";
+import { signIn, requestPasswordReset } from "@/lib/actions/admin/auth";
 import { useAdminDict } from "@/lib/admin-i18n/provider";
 import { LanguageToggle } from "@/components/admin/language-toggle";
 
@@ -17,6 +17,7 @@ export default function AdminLoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [isPending, startTransition] = useTransition();
+  const [forgotMode, setForgotMode] = useState(false);
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
@@ -25,6 +26,19 @@ export default function AdminLoginPage() {
       if (result.success) {
         router.replace("/admin");
         router.refresh();
+      } else {
+        toast.error(result.error);
+      }
+    });
+  }
+
+  function handleReset(e: React.FormEvent) {
+    e.preventDefault();
+    startTransition(async () => {
+      const result = await requestPasswordReset(email);
+      if (result.success) {
+        toast.success(dict.login.resetSent);
+        setForgotMode(false);
       } else {
         toast.error(result.error);
       }
@@ -45,7 +59,7 @@ export default function AdminLoginPage() {
           <p className="text-sm text-muted-foreground">{dict.login.subtitle}</p>
         </div>
 
-        <form onSubmit={handleSubmit} className="mt-8 space-y-4">
+        <form onSubmit={forgotMode ? handleReset : handleSubmit} className="mt-8 space-y-4">
           <div className="space-y-1.5">
             <Label htmlFor="email">{dict.login.email}</Label>
             <Input
@@ -58,22 +72,37 @@ export default function AdminLoginPage() {
               placeholder="admin@jyothisecurityservices.in"
             />
           </div>
-          <div className="space-y-1.5">
-            <Label htmlFor="password">{dict.login.password}</Label>
-            <Input
-              id="password"
-              type="password"
-              required
-              autoComplete="current-password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="••••••••"
-            />
-          </div>
+          {!forgotMode && (
+            <div className="space-y-1.5">
+              <Label htmlFor="password">{dict.login.password}</Label>
+              <Input
+                id="password"
+                type="password"
+                required
+                autoComplete="current-password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                placeholder="••••••••"
+              />
+            </div>
+          )}
           <Button type="submit" className="w-full gap-2" disabled={isPending}>
             {isPending ? <Loader2 className="size-4 animate-spin" /> : null}
-            {isPending ? dict.login.submitting : dict.login.submit}
+            {forgotMode
+              ? isPending
+                ? dict.login.submitting
+                : dict.login.sendReset
+              : isPending
+                ? dict.login.submitting
+                : dict.login.submit}
           </Button>
+          <button
+            type="button"
+            onClick={() => setForgotMode((v) => !v)}
+            className="w-full text-center text-sm text-muted-foreground underline-offset-4 hover:underline"
+          >
+            {forgotMode ? dict.login.backToLogin : dict.login.forgot}
+          </button>
         </form>
       </div>
     </div>
