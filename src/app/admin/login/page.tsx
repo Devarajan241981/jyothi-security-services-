@@ -64,13 +64,10 @@ export default function AdminLoginPage() {
               id="password"
               type="password"
               required
-              inputMode="numeric"
-              pattern="[0-9]*"
-              maxLength={6}
               autoComplete="current-password"
               value={password}
-              onChange={(e) => setPassword(e.target.value.replace(/\D/g, "").slice(0, 6))}
-              placeholder="••••••"
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="••••••••"
             />
           </div>
           <Button type="submit" className="w-full gap-2" disabled={isPending}>
