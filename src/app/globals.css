@@ -1,26 +1,256 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --radius: 0.75rem;
+
+  /* Premium corporate palette */
+  --background: #f8fafc;
+  --foreground: #0f1a2b;
+
+  --card: #ffffff;
+  --card-foreground: #0f1a2b;
+
+  --popover: #ffffff;
+  --popover-foreground: #0f1a2b;
+
+  /* Deep Blue */
+  --primary: #0b5ed7;
+  --primary-hover: #094db3;
+  --primary-foreground: #ffffff;
+
+  /* White / soft blue-gray */
+  --secondary: #eef3fb;
+  --secondary-foreground: #0b5ed7;
+
+  --muted: #eef1f5;
+  --muted-foreground: #5b6b82;
+
+  /* Golden Yellow */
+  --accent: #e0a825;
+  --accent-hover: #c6931b;
+  --accent-foreground: #221a04;
+
+  /* Success Green */
+  --success: #178a4c;
+  --success-foreground: #ffffff;
+
+  --destructive: #cc3333;
+  --destructive-foreground: #ffffff;
+
+  --border: #e2e8f0;
+  --input: #e2e8f0;
+  --ring: #0b5ed7;
+
+  --chart-1: #0b5ed7;
+  --chart-2: #e0a825;
+  --chart-3: #178a4c;
+  --chart-4: #5b6b82;
+  --chart-5: #8b3fd1;
+
+  --sidebar: #0f1a2b;
+  --sidebar-foreground: #eef3fb;
+  --sidebar-primary: #0b5ed7;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #16233a;
+  --sidebar-accent-foreground: #eef3fb;
+  --sidebar-border: #223250;
+  --sidebar-ring: #0b5ed7;
+
+  /* Accessibility variables (overridden client-side, persisted in localStorage) */
+  --a11y-font-scale: 1;
+  --a11y-letter-spacing: 0em;
+  --a11y-word-spacing: 0em;
+  --a11y-line-height: 1.6;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-success: var(--success);
+  --color-success-foreground: var(--success-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --font-sans: var(--font-inter), var(--font-noto-kannada), var(--font-noto-devanagari),
+    var(--font-noto-telugu), ui-sans-serif, system-ui, sans-serif;
+
+  --animate-fade-up: fade-up 0.6s ease-out both;
+  --animate-fade-in: fade-in 0.5s ease-out both;
+  --animate-marquee: marquee 36s linear infinite;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* The site intentionally stays on a single, light, corporate theme regardless
+   of OS light/dark preference — a deliberate choice for a security-agency
+   brand where "premium corporate", not dark/futuristic, is the target look. */
+
+@layer base {
+  * {
+    border-color: var(--border);
+    outline-color: color-mix(in srgb, var(--ring) 50%, transparent);
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: calc(100% * var(--a11y-font-scale));
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    letter-spacing: var(--a11y-letter-spacing);
+    word-spacing: var(--a11y-word-spacing);
+    line-height: var(--a11y-line-height);
+  }
+
+  ::selection {
+    background: var(--accent);
+    color: var(--accent-foreground);
+  }
+}
+
+/* --- Accessibility modes --- */
+html.a11y-high-contrast {
+  --background: #ffffff;
+  --foreground: #000000;
+  --card: #ffffff;
+  --card-foreground: #000000;
+  --primary: #0040a8;
+  --primary-foreground: #ffffff;
+  --secondary: #000000;
+  --secondary-foreground: #ffffff;
+  --muted: #ffffff;
+  --muted-foreground: #000000;
+  --accent: #9c6b00;
+  --accent-foreground: #ffffff;
+  --border: #000000;
+  --input: #000000;
+  --ring: #000000;
+}
+
+html.a11y-high-contrast img,
+html.a11y-high-contrast [data-decorative-illustration] {
+  filter: contrast(1.1) saturate(0.9);
+}
+
+html.a11y-reading-mode main {
+  max-width: 72ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+html.a11y-reading-mode {
+  --a11y-line-height: 1.9;
+}
+
+/* Keyboard focus visibility */
+:focus-visible {
+  outline: 3px solid var(--ring);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--primary);
+  color: var(--primary-foreground);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 0.5rem 0;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+.container-site {
+  width: 100%;
+  max-width: 80rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .container-site {
+    padding-inline: 2rem;
+  }
+}
+
+/* Wider than .container-site: the header needs more breathing room for the
+   full nav + action cluster than the 80rem body-copy measure allows. */
+.container-wide {
+  width: 100%;
+  max-width: 96rem;
+  margin-inline: auto;
+  padding-inline: 1.25rem;
+}
+
+@media (min-width: 1024px) {
+  .container-wide {
+    padding-inline: 2rem;
+  }
 }

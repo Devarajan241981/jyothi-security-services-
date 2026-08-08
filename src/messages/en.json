@@ -1,0 +1,349 @@
+{
+  "meta": {
+    "siteName": "JSS – Jyothi Security Services",
+    "defaultTitle": "JSS | Jyothi Security Services – Professional Security Guards",
+    "defaultDescription": "Jyothi Security Services (JSS) provides trained, verified and disciplined security guards for schools, hospitals, industries, offices, apartments, banks and more across Karnataka."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "industries": "Industries",
+    "training": "Training",
+    "history": "Our History",
+    "gallery": "Gallery",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "requestGuards": "Request Security Guards",
+    "joinTeam": "Become a Security Guard"
+  },
+  "common": {
+    "callNow": "Call Now",
+    "whatsapp": "WhatsApp",
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "readMore": "Read More",
+    "getStarted": "Get Started",
+    "next": "Next",
+    "back": "Back",
+    "skip": "Skip",
+    "submit": "Submit",
+    "submitting": "Submitting…",
+    "optional": "Optional",
+    "requestGuards": "Request Security Guards",
+    "joinTeam": "Become a Security Guard",
+    "close": "Close",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "selectLanguage": "Select language",
+    "loading": "Loading…"
+  },
+  "hero": {
+    "eyebrow": "Karnataka's Trusted Security Partner",
+    "titleLine1": "Protecting People.",
+    "titleLine2": "Securing Businesses.",
+    "titleLine3": "Serving with Discipline.",
+    "subtitle": "JSS supplies background-verified, professionally trained security guards to schools, hospitals, industries, corporate offices and residential communities — backed by 24x7 support and rapid deployment.",
+    "ctaPrimary": "Request Security Guards",
+    "ctaSecondary": "Become a Security Guard",
+    "trustBadge1": "Verified Personnel",
+    "trustBadge2": "24x7 Support",
+    "trustBadge3": "Rapid Deployment",
+    "illustration": {
+      "verifiedAgency": "Verified Agency",
+      "onDuty": "On Duty",
+      "live": "Live",
+      "guards": "Guards",
+      "coverage": "Coverage",
+      "response": "Response"
+    }
+  },
+  "stats": {
+    "heading": "Trusted by Organisations Across Karnataka",
+    "subheading": "Numbers that reflect our commitment to disciplined, reliable security services.",
+    "yearsExperience": "Years of Experience",
+    "securityGuards": "Security Guards",
+    "industriesProtected": "Industries Protected",
+    "schoolsProtected": "Schools Protected",
+    "companiesServed": "Companies Served",
+    "clientsServed": "Clients Served",
+    "citiesCovered": "Cities Covered"
+  },
+  "home": {
+    "servicesHeading": "Security Services Built Around You",
+    "servicesSubheading": "From school gates to factory floors, we deploy the right guards, trained for your environment.",
+    "whyHeading": "Why Organisations Choose JSS",
+    "whySubheading": "Discipline, verification and responsiveness form the foundation of every deployment.",
+    "industriesHeading": "Industries We Protect",
+    "industriesSubheading": "Purpose-trained security teams for every kind of premises.",
+    "ctaHeading": "Ready to Strengthen Your Security?",
+    "ctaSubheading": "Tell us your requirement and our team will get back within hours.",
+    "testimonialsHeading": "What Our Clients Say",
+    "testimonialsSubheading": "Feedback from the schools, factories and companies we serve.",
+    "joinHeading": "Looking for a Security Job?",
+    "joinSubheading": "Join a disciplined, respected team with steady work and professional growth.",
+    "joinCta": "Join Our Security Team"
+  },
+  "about": {
+    "eyebrow": "About JSS",
+    "heading": "A Security Partner Built on Discipline and Trust",
+    "intro": "Jyothi Security Services (JSS) is a professional security agency providing trained and verified guards to schools, hospitals, industries, corporate offices, apartments and institutions. We combine disciplined manpower with structured supervision so that every client site is protected around the clock.",
+    "missionTitle": "Our Mission",
+    "missionText": "To deliver reliable, professional and affordable security services that protect people, property and businesses through well-trained and disciplined personnel.",
+    "visionTitle": "Our Vision",
+    "visionText": "To be the most trusted security services provider in Karnataka, recognised for integrity, discipline and consistent quality of service.",
+    "valuesTitle": "Our Values",
+    "values": {
+      "discipline": { "title": "Discipline", "description": "Every guard follows structured protocols, reporting lines and uniform standards without exception." },
+      "integrity": { "title": "Integrity", "description": "We operate with honesty and transparency in every client relationship and every deployment." },
+      "trust": { "title": "Trust", "description": "Background-oriented screening and consistent supervision build lasting client confidence." },
+      "customerSatisfaction": { "title": "Customer Satisfaction", "description": "We measure success by how safe and supported our clients feel, every single day." }
+    },
+    "whyHeading": "Why Choose JSS",
+    "why": {
+      "professionalGuards": { "title": "Professional Guards", "description": "Well-groomed, uniformed personnel trained for real-world site requirements." },
+      "verifiedPersonnel": { "title": "Verified Personnel", "description": "Guards are screened and documented before deployment to any client site." },
+      "support247": { "title": "24x7 Support", "description": "Our control room and supervisors remain reachable around the clock." },
+      "quickDeployment": { "title": "Quick Deployment", "description": "Replacement and additional guards can be mobilised on short notice." }
+    }
+  },
+  "history": {
+    "eyebrow": "Our Journey",
+    "heading": "Our History",
+    "intro": "JSS has grown step by step, guided by discipline and the trust our clients place in us. This timeline is a general overview of that journey; exact dates and figures will be updated with the company's official records.",
+    "milestones": {
+      "foundation": { "title": "Company Started", "description": "JSS was founded with a small, disciplined team of guards serving local businesses in and around Kolar." },
+      "growth": { "title": "Growth Journey", "description": "Steady referrals and consistent service helped us grow our guard strength and supervisory structure." },
+      "expansion": { "title": "Expansion", "description": "We expanded coverage to additional towns and took on larger institutional clients." },
+      "diversification": { "title": "Industries Served", "description": "Our services broadened to cover schools, hospitals, factories, warehouses and corporate offices." },
+      "today": { "title": "Current Position", "description": "Today, JSS supports a wide range of clients with trained guards, structured attendance and dedicated support." },
+      "future": { "title": "Future Goals", "description": "We aim to deepen training standards, expand into new regions, and adopt better technology for client reporting." }
+    }
+  },
+  "services": {
+    "eyebrow": "What We Offer",
+    "heading": "Our Security Services",
+    "subheading": "Specialised guarding solutions for every kind of premises, staffed with trained and disciplined personnel.",
+    "cardCta": "Request This Service",
+    "items": {
+      "schoolSecurity": { "title": "School Security", "description": "Gate control, visitor screening and child-safe protocols for school campuses." },
+      "collegeSecurity": { "title": "College Security", "description": "Campus patrolling, hostel security and event support for colleges and universities." },
+      "hospitalSecurity": { "title": "Hospital Security", "description": "Patient-friendly, calm security presence for wards, entrances and emergency areas." },
+      "industrySecurity": { "title": "Industry Security", "description": "Perimeter control, material gate-pass checks and shift-based patrolling for industrial units." },
+      "factorySecurity": { "title": "Factory Security", "description": "Access control, vehicle checks and fire-watch support tailored to factory floors." },
+      "corporateOfficeSecurity": { "title": "Corporate Office Security", "description": "Professional front-desk-friendly guards for office lobbies, parking and premises." },
+      "apartmentSecurity": { "title": "Apartment Security", "description": "Gate security, visitor logging and night patrolling for residential apartment complexes." },
+      "warehouseSecurity": { "title": "Warehouse Security", "description": "Stock area monitoring, loading-bay checks and round-the-clock warehouse patrolling." },
+      "constructionSiteSecurity": { "title": "Construction Site Security", "description": "Material and equipment security with access control for active construction sites." },
+      "bankSecurity": { "title": "Bank Security", "description": "Vigilant, well-presented guards trained for banking hall and ATM premises." },
+      "shoppingMallSecurity": { "title": "Shopping Mall Security", "description": "Crowd management, entrance screening and patrolling for retail and mall spaces." },
+      "eventSecurity": { "title": "Event Security", "description": "Crowd control, entry management and coordination for functions and public events." },
+      "residentialSecurity": { "title": "Residential Security", "description": "Dedicated guarding for independent homes, gated communities and villas." },
+      "nightPatrol": { "title": "Night Patrol", "description": "Scheduled night rounds with checkpoint logging for premises and campuses." },
+      "escortServices": { "title": "Escort Services", "description": "Trained personnel for cash-in-transit and personal escort assignments." },
+      "womenSecurityGuards": { "title": "Women Security Guards", "description": "Trained women guards for institutions preferring female security personnel." },
+      "armedGuards": { "title": "Armed Guards", "description": "Licensed armed personnel deployed as per client requirement and regulatory approval." },
+      "unarmedGuards": { "title": "Unarmed Guards", "description": "Disciplined unarmed guards for day-to-day access control and patrolling needs." },
+      "visitorManagement": { "title": "Visitor Management", "description": "Structured visitor logging, ID checks and gate-pass issuance at client premises." },
+      "emergencyResponse": { "title": "Emergency Response", "description": "Guards trained to respond calmly and quickly to on-site emergencies." }
+    }
+  },
+  "training": {
+    "eyebrow": "How We Prepare Our Guards",
+    "heading": "Training & Preparation",
+    "intro": "Every JSS guard goes through structured preparation before deployment. The training areas below describe our general approach.",
+    "items": {
+      "physicalTraining": { "title": "Physical Training", "description": "Basic fitness and stamina building so guards can stay alert through long duty hours." },
+      "discipline": { "title": "Discipline", "description": "Punctuality, chain-of-command and adherence to site protocols at all times." },
+      "fireSafety": { "title": "Fire Safety", "description": "Awareness of fire hazards, extinguisher usage and evacuation coordination." },
+      "emergencyResponse": { "title": "Emergency Response", "description": "Step-by-step response drills for medical, security and safety emergencies." },
+      "visitorHandling": { "title": "Visitor Handling", "description": "Polite, firm visitor screening, logging and gate-pass procedures." },
+      "communicationSkills": { "title": "Communication Skills", "description": "Clear reporting to supervisors and respectful interaction with staff and visitors." },
+      "professionalBehaviour": { "title": "Professional Behaviour", "description": "Grooming, courtesy and composure expected at every client site." },
+      "firstAid": { "title": "First Aid", "description": "Basic first-aid awareness to assist during minor injuries before medical help arrives." },
+      "nightPatrol": { "title": "Night Patrol", "description": "Checkpoint-based night rounds and alertness techniques for low-visibility hours." },
+      "accessControl": { "title": "Access Control", "description": "Gate-pass verification, ID checks and material movement control." },
+      "professionalEthics": { "title": "Professional Ethics", "description": "Honesty, confidentiality and integrity in handling client property and information." },
+      "uniformStandards": { "title": "Uniform Standards", "description": "Grooming and uniform inspection to maintain a sharp, professional appearance." }
+    }
+  },
+  "industries": {
+    "eyebrow": "Who We Serve",
+    "heading": "Industries We Serve",
+    "subheading": "Purpose-trained guarding solutions across sectors.",
+    "items": {
+      "schools": { "title": "Schools" },
+      "colleges": { "title": "Colleges" },
+      "hospitals": { "title": "Hospitals" },
+      "factories": { "title": "Factories" },
+      "industries": { "title": "Industries" },
+      "corporateOffices": { "title": "Corporate Offices" },
+      "warehouses": { "title": "Warehouses" },
+      "banks": { "title": "Banks" },
+      "hotels": { "title": "Hotels" },
+      "retailStores": { "title": "Retail Stores" },
+      "shoppingMalls": { "title": "Shopping Malls" },
+      "constructionCompanies": { "title": "Construction Companies" },
+      "residentialCommunities": { "title": "Residential Communities" },
+      "governmentOffices": { "title": "Government Offices" }
+    }
+  },
+  "testimonials": {
+    "eyebrow": "Client Feedback",
+    "heading": "What Our Clients Say",
+    "empty": "Client testimonials will appear here once published.",
+    "items": {
+      "schoolPrincipal": { "name": "Radha Nagaraj", "role": "School Principal", "quote": "The guards are punctual, courteous with parents, and firm at the gate. Exactly what a school campus needs." },
+      "factoryManager": { "name": "Suresh Kumar", "role": "Factory Manager", "quote": "Shift handovers are smooth and the patrolling logs give us real visibility into our night security." },
+      "apartmentAssociation": { "name": "Manjula P.", "role": "Apartment Association", "quote": "Visitor logging has made our residents feel far more secure. The guards know every family by name." },
+      "warehouseOwner": { "name": "Anil Verma", "role": "Warehouse Owner", "quote": "Stock checks at the gate have reduced pilferage significantly since JSS took over our security." },
+      "companyHr": { "name": "Priya D.", "role": "Company HR", "quote": "Replacement guards arrive within hours whenever needed. Reliable and easy to coordinate with." }
+    }
+  },
+  "gallery": {
+    "eyebrow": "A Glimpse Inside JSS",
+    "heading": "Gallery",
+    "empty": "Gallery photos will appear here once published.",
+    "filterAll": "All",
+    "categories": {
+      "training": "Training",
+      "schoolSecurity": "School Security",
+      "industrySecurity": "Industry Security",
+      "officeSecurity": "Office Security",
+      "patrolling": "Patrolling",
+      "nightPatrol": "Night Patrol",
+      "events": "Events",
+      "uniformInspection": "Uniform Inspection"
+    }
+  },
+  "contact": {
+    "eyebrow": "Get in Touch",
+    "heading": "Contact JSS",
+    "subheading": "Reach out for guard deployment, partnership enquiries, or general questions.",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "address": "Office Address",
+    "hours": "Working Hours",
+    "emergency": "Emergency Contact",
+    "mapHeading": "Find Us Near Kolar Tomato Market",
+    "callButton": "Call Us Now",
+    "whatsappButton": "Chat on WhatsApp"
+  },
+  "footer": {
+    "description": "Jyothi Security Services (JSS) provides professionally trained security personnel for schools, hospitals, industries, offices and residential communities across Karnataka.",
+    "quickLinks": "Quick Links",
+    "servicesHeading": "Services",
+    "industriesHeading": "Industries",
+    "languagesHeading": "Languages",
+    "legalHeading": "Legal",
+    "contactHeading": "Contact",
+    "privacyPolicy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "copyright": "© {year} Jyothi Security Services (JSS). All rights reserved.",
+    "adminLogin": "Admin Login"
+  },
+  "requestForm": {
+    "heading": "Request Security Guards",
+    "subheading": "Answer a few quick questions and our team will reach out with a customised deployment plan.",
+    "successTitle": "Request Received!",
+    "successMessage": "Thank you. Our team has received your requirement and will contact you shortly.",
+    "backToHome": "Back to Home",
+    "step": "Step {current} of {total}",
+    "steps": {
+      "premisesType": { "question": "Who needs security?", "helper": "Choose the type of premises that best matches your requirement." },
+      "companyName": { "question": "What is your organisation's name?", "placeholder": "e.g. Sunrise Public School" },
+      "contactPerson": { "question": "Who should we speak with?", "placeholder": "Full name of contact person" },
+      "phone": { "question": "What is the best phone number to reach you?", "placeholder": "10-digit mobile number" },
+      "email": { "question": "What is your email address?", "placeholder": "you@company.com" },
+      "location": { "question": "Where is the premises located?", "placeholder": "Area, city, pincode" },
+      "guardCount": { "question": "How many security guards do you need?", "helper": "Drag the slider to select a headcount." },
+      "guardType": { "question": "Preferred guard type?" },
+      "age": { "question": "Preferred age range for guards?", "placeholder": "e.g. 25 – 40 years" },
+      "languages": { "question": "Which languages should guards speak?" },
+      "shift": { "question": "Which shift do you need covered?" },
+      "additionalRequirements": { "question": "Any additional requirements?", "placeholder": "Tell us more about your site, timing or specific needs..." }
+    },
+    "premisesTypes": {
+      "school": "School",
+      "college": "College",
+      "hospital": "Hospital",
+      "industry": "Industry",
+      "factory": "Factory",
+      "office": "Office",
+      "warehouse": "Warehouse",
+      "apartment": "Apartment",
+      "bank": "Bank",
+      "hotel": "Hotel",
+      "constructionSite": "Construction Site",
+      "shoppingMall": "Shopping Mall",
+      "other": "Other"
+    },
+    "guardTypes": { "male": "Male", "female": "Female", "both": "Both" },
+    "shifts": { "day": "Day", "night": "Night", "both": "Both (Day & Night)" },
+    "languages": {
+      "kannada": "Kannada",
+      "english": "English",
+      "hindi": "Hindi",
+      "telugu": "Telugu",
+      "tamil": "Tamil"
+    },
+    "validation": {
+      "premisesTypeRequired": "Please select who needs security.",
+      "companyNameRequired": "Please enter your organisation's name.",
+      "contactPersonRequired": "Please enter a contact person's name.",
+      "phoneInvalid": "Please enter a valid 10-digit phone number.",
+      "emailInvalid": "Please enter a valid email address.",
+      "locationRequired": "Please enter the premises location.",
+      "guardTypeRequired": "Please select a preferred guard type.",
+      "shiftRequired": "Please select a preferred shift."
+    }
+  },
+  "joinForm": {
+    "heading": "Become a Security Guard",
+    "subheading": "Join a disciplined, respected security team. Answer a few quick questions to apply.",
+    "successTitle": "Application Submitted!",
+    "successMessage": "Thank you for applying. Our recruitment team will contact you soon.",
+    "backToHome": "Back to Home",
+    "step": "Step {current} of {total}",
+    "steps": {
+      "fullName": { "question": "What is your full name?", "placeholder": "Enter your full name" },
+      "age": { "question": "What is your age?", "placeholder": "Age in years" },
+      "phone": { "question": "What is your phone number?", "placeholder": "10-digit mobile number" },
+      "address": { "question": "What is your complete address?", "placeholder": "House no, street, village/town, district, pincode" },
+      "experience": { "question": "Do you have prior security experience?", "placeholder": "Describe any previous experience (if any)" },
+      "languages": { "question": "Which languages do you know?" },
+      "aadhaar": { "question": "Upload your Aadhaar card", "helper": "Optional. Accepted formats: PDF, JPG, PNG (max 5 MB)." }
+    },
+    "validation": {
+      "fullNameRequired": "Please enter your full name.",
+      "ageInvalid": "Please enter a valid age between 18 and 60.",
+      "phoneInvalid": "Please enter a valid 10-digit phone number.",
+      "addressRequired": "Please enter your complete address."
+    }
+  },
+  "accessibility": {
+    "toggleLabel": "Accessibility options",
+    "heading": "Accessibility Settings",
+    "fontSize": "Font Size",
+    "increase": "Increase",
+    "decrease": "Decrease",
+    "letterSpacing": "Letter Spacing",
+    "wordSpacing": "Word Spacing",
+    "lineHeight": "Line Height",
+    "highContrast": "High Contrast Mode",
+    "readingMode": "Reading Mode",
+    "reset": "Reset to Default"
+  },
+  "legal": {
+    "privacyTitle": "Privacy Policy",
+    "termsTitle": "Terms & Conditions",
+    "lastUpdated": "Last updated: {date}",
+    "placeholder": "This is placeholder legal content for design and development purposes. Please replace it with content reviewed by your legal counsel before publishing this site."
+  },
+  "notFound": {
+    "heading": "Page Not Found",
+    "message": "The page you are looking for doesn't exist or has been moved.",
+    "cta": "Back to Home"
+  }
+}

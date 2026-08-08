@@ -1,0 +1,16 @@
+export const adminNavItems = [
+  { labelKey: "dashboard", href: "/admin", icon: "LayoutDashboard" },
+  { labelKey: "guards", href: "/admin/guards", icon: "Users" },
+  { labelKey: "clients", href: "/admin/clients", icon: "Building2" },
+  { labelKey: "enquiries", href: "/admin/enquiries", icon: "Inbox" },
+  { labelKey: "applications", href: "/admin/applications", icon: "FileUser" },
+  { labelKey: "assignments", href: "/admin/assignments", icon: "ClipboardList" },
+  { labelKey: "attendance", href: "/admin/attendance", icon: "CalendarCheck2" },
+  { labelKey: "salary", href: "/admin/salary", icon: "Wallet" },
+  { labelKey: "companies", href: "/admin/companies", icon: "Landmark" },
+  { labelKey: "reports", href: "/admin/reports", icon: "BarChart3" },
+  { labelKey: "calendar", href: "/admin/calendar", icon: "Calendar" },
+  { labelKey: "calculator", href: "/admin/calculator", icon: "Calculator" },
+  { labelKey: "testimonials", href: "/admin/testimonials", icon: "Quote" },
+  { labelKey: "settings", href: "/admin/settings", icon: "Settings" },
+] as const satisfies readonly { labelKey: keyof import("@/lib/admin-i18n/dictionaries").AdminDictionary["nav"]; href: string; icon: string }[];
