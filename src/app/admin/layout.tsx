@@ -3,7 +3,7 @@ import { Inter, Noto_Sans_Kannada } from "next/font/google";
 import { Toaster } from "@/components/ui/sonner";
 import { AdminSidebar } from "@/components/admin/sidebar";
 import { AdminTopbar } from "@/components/admin/topbar";
-import { createClient } from "@/lib/supabase/server";
+import { createPublicClient } from "@/lib/supabase/server";
 import { getAdminNotificationData } from "@/lib/admin-notifications-data";
 import { getAdminDictionary } from "@/lib/admin-i18n/get-locale";
 import { AdminIntlProvider } from "@/lib/admin-i18n/provider";
@@ -47,10 +47,10 @@ export default async function AdminRootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const supabase = await createClient();
-  const {
-    data: { user },
-  } = await supabase.auth.getUser();
+  const supabase = await createPublicClient();
+  const user = supabase
+    ? (await supabase.auth.getUser()).data.user
+    : null;
   const { locale, dict } = await getAdminDictionary();
 
   if (!user) {

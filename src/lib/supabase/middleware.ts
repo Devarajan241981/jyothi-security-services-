@@ -8,6 +8,20 @@ import type { Database } from "@/types/database";
  * Component or Route Handler reads the session.
  */
 export async function updateSession(request: NextRequest) {
+  const isLoginPage = request.nextUrl.pathname === "/admin/login";
+
+  // Without Supabase env vars the admin panel can't function, but middleware
+  // must not 500 — send users to the login page instead.
+  if (
+    !process.env.NEXT_PUBLIC_SUPABASE_URL ||
+    !process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY
+  ) {
+    if (isLoginPage) return NextResponse.next({ request });
+    const url = request.nextUrl.clone();
+    url.pathname = "/admin/login";
+    return NextResponse.redirect(url);
+  }
+
   let response = NextResponse.next({ request });
 
   const supabase = createServerClient<Database>(
@@ -34,8 +48,6 @@ export async function updateSession(request: NextRequest) {
   const {
     data: { user },
   } = await supabase.auth.getUser();
-
-  const isLoginPage = request.nextUrl.pathname === "/admin/login";
 
   if (!user && !isLoginPage) {
     const url = request.nextUrl.clone();
